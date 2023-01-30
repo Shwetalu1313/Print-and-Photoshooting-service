@@ -1,0 +1,378 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Contact</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="images/favicon.PNG">
+	<link rel="apple-touch-icon" href="images/icon.png">
+
+	<!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/plugins.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Cusom css -->
+   <link rel="stylesheet" href="css/custom.css">
+
+	<!-- Modernizer js -->
+	<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+
+     <style type="text/css">
+     	#map { height: 390px; }
+     </style>
+</head>
+<body>
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+		
+		<!-- Header -->
+		<header id="wn__header" class="oth-page header__area header__absolute sticky__header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-7 col-lg-2">
+						<div class="logo">
+							<a href="index.php">
+								<img src="images/logo/logo.png" alt="logo images">
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-8 d-none d-lg-block">
+						<nav class="mainmenu__nav">
+							<ul class="meninmenu d-flex justify-content-start">
+								<li class="drop with--one--item"><a href="index.php">Home</a></li>
+								<li class="drop"><a href="#">Shop</a>
+									<div class="megamenu mega03">
+										<ul class="item item03">
+											<li class="title">Shop Layout</li>
+											<li><a href="packages.php">Packages</a></li>
+										</ul>
+										<ul class="item item03">
+											<li class="title">Special Order</li>
+											<li><a href="checkoutPrintingSpecial.php">Special Order Printing</a></li>
+											<li><a href="checkoutPhotoSpecial.php">Special Order Photo Shooting</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="drop"><a href="OrderHistory.php">My Orders</a>
+									<div class="megamenu mega03">
+										<ul class="item item03">
+											<li class="title">Orders</li>
+											<li><a href="OrderHistory.php">Orders History </a></li>
+										</ul>
+									</div>
+								</li>
+
+								<li class="drop"><a href="#">About</a>
+									<div class="megamenu dropdown">
+										<ul class="item item01">
+											<li><a href="about.php">About Page</a></li>
+											</ul>
+									</div>
+								</li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-md-8 col-sm-8 col-5 col-lg-2">
+						<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
+							<li class="setting__bar__icon"><a class="setting__active" href="#"></a>
+								<div class="searchbar__content setting__block">
+									<div class="content-inner">
+										<div class="switcher-currency">
+											<strong class="label switcher-label">
+												<span>My Account</span>
+											</strong>
+											<div class="switcher-options">
+												<div class="switcher-currency-trigger">
+													<div class="setting__menu">
+														<span><a href="customer_profile_update.php">My Profile</a></span>
+														<span><a href="customer_L_R.php">Login</a></span>
+														<span><a href="customer_logout.php">Logout</a></span>
+														<span><a href="customer_L_R.php">Create An Account</a></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Start Mobile Menu -->
+				<div class="row d-none">
+					<div class="col-lg-12 d-none">
+						<nav class="mobilemenu__nav">
+							<ul class="meninmenu">
+								<li><a href="index.php">Home</a></li>
+								<li><a href="#">Pages</a>
+									<ul>
+										<li><a href="about.html">About Page</a></li>
+										<li><a href="portfolio.html">Portfolio</a>
+											<ul>
+												<li><a href="portfolio.html">Portfolio</a></li>
+												<li><a href="portfolio-details.html">Portfolio Details</a></li>
+											</ul>
+										</li>
+										<li><a href="my-account.html">My Account</a></li>
+										<li><a href="cart.html">Cart Page</a></li>
+										<li><a href="checkout.html">Checkout Page</a></li>
+										<li><a href="wishlist.html">Wishlist Page</a></li>
+										<li><a href="error404.html">404 Page</a></li>
+										<li><a href="faq.html">Faq Page</a></li>
+										<li><a href="team.html">Team Page</a></li>
+									</ul>
+								</li>
+								<li><a href="shop-grid.html">Shop</a>
+									<ul>
+										<li><a href="shop-grid.html">Shop Grid</a></li>
+										<li><a href="single-product.html">Single Product</a></li>
+									</ul>
+								</li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- End Mobile Menu -->
+	            <div class="mobile-menu d-block d-lg-none">
+	            </div>
+	            <!-- Mobile Menu -->	
+			</div>		
+		</header>
+		<!-- //Header -->
+
+
+
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area bg-image--6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner text-center">
+                        	<h2 class="bradcaump-title">Contact Us</h2>
+                            <nav class="bradcaump-content">
+                              <a class="breadcrumb_item" href="index.php">Home</a>
+                              <span class="brd-separetor">/</span>
+                              <span class="breadcrumb_item active">Contact Us</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area -->
+        <!-- Start Contact Area -->
+        <section class="wn_contact_area bg--white pt--80 pb--80">
+			<div class="google__map pb--80">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="map"></div>
+						</div>
+					</div>
+				</div>
+        	</div>
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-lg-8 col-12">
+        				<div class="contact-form-wrap">
+        					<h2 class="contact__title">Get in touch</h2>
+        					<p>Our business has gained the trust of many people and we often offer discounts.</p>
+                            <form action="mailto:jor456k@gmail.com" method="post" enctype="text/plain">
+                                <div class="single-contact-form space-between">
+                                    <input type="text" name="firstname" placeholder="First Name*" val>
+                                    <input type="text" name="lastname" placeholder="Last Name*" value="">
+                                </div>
+                                <div class="single-contact-form space-between">
+                                    <input type="email" name="email" placeholder="Email*">
+                                    <input type="text" name="website" placeholder="Website*">
+                                </div>
+                                <div class="single-contact-form">
+                                    <input type="text" name="subject" placeholder="Subject*">
+                                </div>
+                                <div class="single-contact-form message">
+                                    <textarea name="message" placeholder="Type your message here.."></textarea>
+                                </div>
+                                <div class="contact-btn">
+                                    <input type="submit"name="" value="submit">
+                                </div>
+                            </form>
+                        </div> 
+                        <div class="form-output">
+                            <p class="form-messege">
+                        </div>
+        			</div>
+        			<div class="col-lg-4 col-12 md-mt-40 sm-mt-40">
+        				<div class="wn__address">
+        					<h2 class="contact__title">Get Studio info.</h2>
+        					<p> Our Lovely customers, you guys can get our informatin from social media shuch as facebook and other platform or looking this map you can get to our studio. </p>
+        					<div class="wn__addres__wreapper">
+
+        						<div class="single__address">
+        							<i class="icon-location-pin icons"></i>
+        							<div class="content">
+        								<span>address:</span>
+        								<p>Ramree, Rakhine</p>
+        							</div>
+        						</div>
+
+        						<div class="single__address">
+        							<i class="icon-phone icons"></i>
+        							<div class="content">
+        								<span>Phone Number:</span>
+        								<p>123-123-123</p>
+        							</div>
+        						</div>
+
+        						<div class="single__address">
+        							<i class="icon-envelope icons"></i>
+        							<div class="content">
+        								<span>Email address:</span>
+        								<p>kingstudio@gmail.com</p>
+        							</div>
+        						</div>
+
+        						<div class="single__address">
+        							<i class="icon-globe icons"></i>
+        							<div class="content">
+        								<span>website address:</span>
+        								<p>www.kingstudio.com</p>
+        							</div>
+        						</div>
+
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!-- End Contact Area -->
+		<!-- Footer Area -->
+		<footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
+			<div class="footer-static-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="footer__widget footer__menu">
+								<div class="ft__logo">
+									<a href="index.php">
+										<img src="images/logo/3.png" alt="logo">
+									</a>
+									<p>Getting more services by buying the packages or you can get as special orders.</p>
+								</div>
+								<div class="footer__content">
+									<ul class="social__net social__net--2 d-flex justify-content-center">
+										<li><a href="#"><i class="bi bi-facebook"></i></a></li>
+										<li><a href="#"><i class="bi bi-google"></i></a></li>
+										<li><a href="#"><i class="bi bi-twitter"></i></a></li>
+										<li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+										<li><a href="#"><i class="bi bi-youtube"></i></a></li>
+									</ul>
+									<ul class="mainmenu d-flex justify-content-center">
+										<li><a href="index.php">Home</a></li>
+										<li><a href="packages.php">Packages</a></li>
+										<li><a href="contact.html">Contact</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright__wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="copyright">
+								<div class="copy__right__inner text-left">
+									<p>Copyright <i class="fa fa-copyright"></i> <a href='#'>Khant Nyein Naing</a> All Rights Reserved</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="payment text-right">
+								<img src="images/icons/payment.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- //Footer Area -->
+
+	</div>
+	<!-- //Main wrapper -->
+
+	<!-- JS Files -->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+
+
+
+	<script src="js/active.js"></script>
+
+	<script type="text/javascript">
+		var map = L.map('map').setView([19.090671, 93.863479], 13);
+
+		L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		    maxZoom: 19,
+		    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		}).addTo(map);
+
+		var marker = L.marker([19.090671, 93.863479]).addTo(map);
+		var circle = L.circle([19.090671, 93.863479], {
+		    color: 'red',
+		    fillColor: '#f03',
+		    fillOpacity: 0.2,
+		    radius: 30000
+		}).addTo(map);
+
+		var polygon = L.polygon([
+		    [51.509, -0.08],
+		    [51.503, -0.06],
+		    [51.51, -0.047]
+		]).addTo(map);
+
+		marker.bindPopup("<b>Hello!</b><br>This is KingStudio.").openPopup();
+		circle.bindPopup("This is shooting available area.");
+		polygon.bindPopup("Hi.");
+
+		var popup = L.popup();
+
+		function onMapClick(e) {
+		    popup
+		        .setLatLng(e.latlng)
+		        .setContent("You clicked the map at " + e.latlng.toString())
+		        .openOn(map);
+		}
+
+		map.on('click', onMapClick);
+			</script>
+	
+</body>
+</html>
